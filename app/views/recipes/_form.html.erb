@@ -3,5 +3,12 @@
 <%= f.label :title %>
 <%= f.text_field :title %>
 
+<%= f.fields_for :ingredients do |ingr| %>
+<%= ingr.label :name %>
+<%= ingr.text_field :name %>
+
+<%= ingr.label :quantity %>
+<%= ingr.text_field :quantity %>
+
 <%= f.submit %>
 <% end %>
